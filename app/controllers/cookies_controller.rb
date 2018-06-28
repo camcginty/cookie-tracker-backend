@@ -1,5 +1,5 @@
 class CookiesController < ApplicationController
-  before_action :set_cookie, only: [:show, :update, :destroy]
+  before_action :set_cookie, only: %i[show update destroy]
 
   # GET /cookies
   def index

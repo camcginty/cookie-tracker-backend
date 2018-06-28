@@ -8,3 +8,9 @@ A viewer of the site wants to see how many cookies we have for the event.
 Wireframes: https://imgur.com/gallery/bbd23x2
 
 ERD: https://imgur.com/gallery/BsIiKfd
+
+
+to do:
+- define user/cookie relationships
+- edit serilaizers
+- add foreign key to users (cookie id)

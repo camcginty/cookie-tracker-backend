@@ -11,6 +11,6 @@ ERD: https://imgur.com/gallery/BsIiKfd
 
 
 to do:
-- define user/cookie relationships
 - edit serilaizers
-- add foreign key to users (cookie id)
+
+done:

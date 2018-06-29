@@ -15,7 +15,7 @@ class CookiesController < ApplicationController
 
   # POST /cookies
   def create
-    @cookie = Cookie.new(cookie_params)
+    @cookie = current_user.cookies.build(cookie_params)
 
     if @cookie.save
       render json: @cookie, status: :created
@@ -41,7 +41,7 @@ class CookiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cookie
-      @cookie = Cookie.find(params[:id])
+      @cookie = current_user.cookies.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

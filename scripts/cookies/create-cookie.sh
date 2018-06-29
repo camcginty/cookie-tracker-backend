@@ -7,7 +7,7 @@ curl "http://localhost:4741/cookies" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "cookie": {
-      "text": "'"${TEXT}"'"
+      "cookieName": "'"${NAME}"'"
     }
   }'
 

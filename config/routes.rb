@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   resources :cookies
   # RESTful routes
-  resources :cookies, except: %i[new edit]
+  resources :cookies, only: %i[index show create update destroy]
   resources :users, only: %i[index show update]
 
   # Custom routes

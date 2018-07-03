@@ -1,4 +1,4 @@
-class CookiesController < ApplicationController
+class CookiesController < OpenReadController
   before_action :set_cookie, only: %i[show update destroy]
 
   # GET /cookies

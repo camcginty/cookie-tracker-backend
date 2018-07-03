@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180629170955) do
+ActiveRecord::Schema.define(version: 20180701023018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,12 +42,10 @@ ActiveRecord::Schema.define(version: 20180629170955) do
     t.string "screen_name"
     t.string "preferred_name"
     t.string "event"
-    t.string "cookie_id"
-    t.bigint "cookie_id_id"
-    t.index ["cookie_id_id"], name: "index_users_on_cookie_id_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["token"], name: "index_users_on_token", unique: true
   end
 
+  add_foreign_key "cookies", "users"
   add_foreign_key "examples", "users"
 end

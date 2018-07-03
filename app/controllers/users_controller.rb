@@ -40,6 +40,7 @@ class UsersController < OpenReadController
     # else 400
     if current_user.authenticate(pw_creds[:old]) &&
        !(current_user.password = pw_creds[:new]).blank? &&
+       pw_creds[:old] != pw_creds[:new] &&
        current_user.save
       head :no_content
     else

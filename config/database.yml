@@ -1,4 +1,4 @@
-<% project_name = 'cookie-tracker' %>
+<% project_name = 'rails-api-template' %>
 
 default: &default
   adapter: postgresql

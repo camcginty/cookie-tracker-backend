@@ -1,6 +1,8 @@
 class CookieSerializer < ActiveModel::Serializer
-  attributes :id, :cookieName, :amount, :distributableUnits
+  attributes :id, :cookieName, :amount, :distributableUnits, :editable
   belongs_to :user
-  # make display the name of the cookie with that id
 
+  def editable
+    scope == object.user
+  end
 end
